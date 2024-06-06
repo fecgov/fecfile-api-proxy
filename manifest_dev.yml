@@ -10,4 +10,4 @@ applications:
     buildpacks:
       - nginx_buildpack
     env:
-      FECFILE_WEB_API: "fecfile-web-api-dev.app.cloud.gov"
+      FECFILE_WEB_API: "https://fecfile-web-api-dev.app.cloud.gov"
