@@ -1,0 +1,13 @@
+---
+applications:
+  - name: fecfile-api-proxy
+    instances: 1
+    memory: 512M
+    disk_quota: 1G
+    routes:
+      - route: fecfile-api-proxy-stage.app.cloud.gov
+    stack: cflinuxfs4
+    buildpacks:
+      - nginx_buildpack
+    env:
+      FECFILE_WEB_API: "fecfile-web-api-stage.app.cloud.gov"

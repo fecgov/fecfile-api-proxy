@@ -1,0 +1,31 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+jobs:
+  deploy:
+    docker:
+      - image: cimg/base:2024.06
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install CF CLI
+          command: |
+            mkdir -p $HOME/bin
+            export PATH=$HOME/bin:$PATH
+            curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&version=7.1.0" | tar xzv -C $HOME/bin
+
+      - run:
+          name: Deploy Proxy
+          command: |
+            export PATH=$HOME/bin:$PATH
+            ./bin/cf_deploy.sh fecfile-api-proxy fec-fecfileonline-prototyping $CIRCLE_BRANCH
+
+workflows:
+  version: 2.1
+  build-deploy:
+    jobs:
+      - deploy
