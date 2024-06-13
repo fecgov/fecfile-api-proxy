@@ -10,4 +10,4 @@ applications:
     buildpacks:
       - nginx_buildpack
     env:
-      FECFILE_WEB_API: "https://fecfile-web-api-dev.apps.internal"
+      FECFILE_WEB_API: "http://fecfile-web-api-dev.apps.internal:8080"
