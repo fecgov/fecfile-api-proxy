@@ -5,9 +5,9 @@ applications:
     memory: 512M
     disk_quota: 1G
     routes:
-      - route: fecfile-api-proxy-prod.app.cloud.gov
+      - route: fecfile-web-api-prod.app.cloud.gov
     stack: cflinuxfs4
     buildpacks:
       - nginx_buildpack
     env:
-      FECFILE_WEB_API: "fecfile-web-api-prod.app.cloud.gov"
+      FECFILE_WEB_API: "http://fecfile-web-api-prod.apps.internal:8080"
