@@ -5,7 +5,7 @@ applications:
     memory: 256M
     disk_quota: 1G
     routes:
-      - route: api-stage.fecfile.fec.gov
+      - route: fecfile-web-api-stage.app.cloud.gov
     stack: cflinuxfs4
     buildpacks:
       - nginx_buildpack
