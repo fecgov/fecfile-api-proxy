@@ -9,6 +9,7 @@ cloud_gov=${CF_API:-https://api.fr.cloud.gov}
 app=${1}
 org=${2}
 branch=${3}
+web_api="fecfile-web-api"
 
 # Get the space that corresponds with the branch name
 if [[ ${branch} == "develop" ]]; then
@@ -60,4 +61,4 @@ fi
 cf ${command} ${app} -f ${manifest}
 
 # Add network policies
-cf add-network-policy fecfile-api-proxy fecfile-web-api
+cf add-network-policy ${app} ${web_api}
