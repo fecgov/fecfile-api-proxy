@@ -1,0 +1,13 @@
+---
+applications:
+  - name: fecfile-api-proxy
+    instances: 2
+    memory: 256M
+    disk_quota: 1G
+    routes:
+      - route: test-api.fecfile.fec.gov
+    stack: cflinuxfs4
+    buildpacks:
+      - nginx_buildpack
+    env:
+      FECFILE_WEB_API: "http://fecfile-web-api-test.apps.internal:8080"
