@@ -18,7 +18,7 @@ if [[ ${branch} == "develop" ]]; then
 elif [[ ${branch} == release* ]]; then
     echo "Branch starts with release, deploying to stage space"
     space="stage"
-elif [[ ${branch} == "feature/1572-test-environment-b" ]]; then
+elif [[ ${branch} == "main" ]]; then
     echo "Branch is main, deploying to test space"
     space="test"
 else
