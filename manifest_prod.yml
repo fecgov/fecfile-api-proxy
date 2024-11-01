@@ -1,8 +1,8 @@
 ---
 applications:
   - name: fecfile-api-proxy
-    instances: 2
-    memory: 256M
+    instances: 0
+    memory: 1G
     disk_quota: 1G
     routes:
       - route: api.fecfile.fec.gov
