@@ -1,7 +1,7 @@
 ---
 applications:
   - name: fecfile-api-proxy
-    instances: 0
+    instances: 2
     memory: 1G
     disk_quota: 1G
     routes:
