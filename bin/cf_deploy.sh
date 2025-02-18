@@ -21,6 +21,9 @@ elif [[ ${branch} == release* ]]; then
 elif [[ ${branch} == "main" ]]; then
     echo "Branch is main, deploying to test space"
     space="test"
+elif [[ ${branch} == "main-prod-deploy" ]]; then
+    echo "Branch is main-prod-deploy, deploying to prod space"
+    space="prod"
 else
 # Don't deploy other branches, pass build
     echo "No space detected"
