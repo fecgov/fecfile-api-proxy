@@ -18,7 +18,7 @@ if [[ ${branch} == "develop" ]]; then
 elif [[ ${branch} == release* ]]; then
     echo "Branch starts with release, deploying to stage space"
     space="stage"
-elif [[ ${branch} == "test" ]]; then
+elif [[ ${branch} == "release/test" ]]; then
     echo "Branch is test, deploying to test space"
     space="test"
 elif [[ ${branch} == "main" ]]; then
