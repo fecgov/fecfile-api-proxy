@@ -15,7 +15,7 @@ web_api="fecfile-web-api"
 if [[ ${branch} == "develop" ]]; then
     echo "Branch is develop, deploying to dev space"
     space="dev"
-elif [[ ${branch} == release* ]]; then
+elif [[ ${branch} == release/sprint* ]]; then
     echo "Branch starts with release, deploying to stage space"
     space="stage"
 elif [[ ${branch} == "release/test" ]]; then
