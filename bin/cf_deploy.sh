@@ -13,16 +13,16 @@ web_api="fecfile-web-api"
 
 # Get the space that corresponds with the branch name
 if [[ ${branch} == "develop" ]]; then
-    echo "Branch is develop, deploying to dev space"
+    echo "Branch is 'develop', deploying to dev space."
     space="dev"
-elif [[ ${branch} == release* ]]; then
-    echo "Branch starts with release, deploying to stage space"
+elif [[ ${branch} == release/sprint* ]]; then
+    echo "Branch starts with 'release/sprint', deploying to stage space."
     space="stage"
-elif [[ ${branch} == "test" ]]; then
-    echo "Branch is test, deploying to test space"
+elif [[ ${branch} == "release/test" ]]; then
+    echo "Branch is 'release/test', deploying to test space."
     space="test"
 elif [[ ${branch} == "main" ]]; then
-    echo "Branch is main, deploying to prod space"
+    echo "Branch is 'main', deploying to prod space."
     space="prod"
 else
 # Don't deploy other branches, pass build
