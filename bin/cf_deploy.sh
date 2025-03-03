@@ -51,6 +51,7 @@ fi
 )
 
 # Target space
+cf version
 cf target -o ${org} -s ${space}
 
 # If the app exists, use rolling deployment
