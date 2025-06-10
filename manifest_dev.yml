@@ -8,7 +8,7 @@ applications:
       - route: dev-api.fecfile.fec.gov
     stack: cflinuxfs4
     buildpacks:
-      - nginx_buildpack
+      - https://github.com/cloudfoundry/nginx-buildpack#1.2.26
     env:
       FECFILE_WEB_API: "http://fecfile-web-api-dev.apps.internal:8080"
       FECFILE_WEB_APP: "https://dev.fecfile.fec.gov"
