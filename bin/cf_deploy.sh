@@ -9,11 +9,11 @@ cloud_gov=${CF_API:-https://api.fr.cloud.gov}
 app=${1}
 org=${2}
 branch=${3}
-web_api="fecfile-web-api"
+web_api="load-fecfile-web-api"
 
 # Get the space that corresponds with the branch name
-if [[ ${branch} == "develop" ]]; then
-    echo "Branch is 'develop', deploying to dev space."
+if [[ ${branch} == "2414-load-test-mirror" ]]; then
+    echo "Branch is '2414-load-test-mirror', deploying to dev space."
     space="dev"
 elif [[ ${branch} == release/sprint* ]]; then
     echo "Branch starts with 'release/sprint', deploying to stage space."

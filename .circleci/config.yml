@@ -22,7 +22,7 @@ jobs:
           name: Deploy Proxy
           command: |
             export PATH=$HOME/bin:$PATH
-            ./bin/cf_deploy.sh fecfile-api-proxy fec-fecfile $CIRCLE_BRANCH
+            ./bin/cf_deploy.sh load-fecfile-api-proxy fec-fecfile $CIRCLE_BRANCH
 
 workflows:
   version: 2.1
