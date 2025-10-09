@@ -4,4 +4,4 @@ This application is an nginx reverse proxy for the fecfile-web-api application t
 
 ## Deployment (FEC team only)
 
-[Deployment instructions...](https://github.com/fecgov/fecfile-web-api/wiki/Deployment)
+[Deployment instructions](https://github.com/fecgov/fecfile-web-api/wiki/Deployment)
