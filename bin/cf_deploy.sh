@@ -12,8 +12,8 @@ branch=${3}
 web_api="fecfile-web-api"
 
 # Get the space that corresponds with the branch name
-if [[ ${branch} == "develop" ]]; then
-    echo "Branch is 'develop', deploying to dev space."
+if [[ ${branch} == "feature/2578-circleci_blobless-DEV_test" ]]; then
+    echo "Branch is 'feature/2578-circleci_blobless-DEV_test', deploying to dev space."
     space="dev"
 elif [[ ${branch} == release/sprint* ]]; then
     echo "Branch starts with 'release/sprint', deploying to stage space."
