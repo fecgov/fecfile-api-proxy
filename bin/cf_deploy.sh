@@ -12,7 +12,7 @@ branch=${3}
 web_api="fecfile-web-api"
 
 # Get the space that corresponds with the branch name
-if [[ ${branch} == "developr" ]]; then
+if [[ ${branch} == "develop" ]]; then
     echo "Branch is 'develop', deploying to dev space."
     space="dev"
 elif [[ ${branch} == release/sprint* ]]; then
