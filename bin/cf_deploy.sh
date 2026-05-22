@@ -50,6 +50,9 @@ fi
   fi
 )
 
+# Call blocklist generator before deploy
+./generate_blockips.sh "${app}" "${space}" "${org}"
+
 # Target space
 cf version
 cf target -o ${org} -s ${space}
