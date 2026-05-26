@@ -4,6 +4,8 @@ applications:
     instances: 2
     memory: 1G
     disk_quota: 1G
+    services:
+      - fecfile-api-creds-dev
     routes:
       - route: dev-api.fecfile.fec.gov
     stack: cflinuxfs4
