@@ -1,4 +1,4 @@
-# fecfile-proxy-api
+# fecfile-api-proxy
 
 This application is an nginx reverse proxy for the fecfile-web-api application that enables IP blocking and other protection options.
 
